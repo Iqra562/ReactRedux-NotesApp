@@ -8,6 +8,7 @@ function AddTodo(props){
   const dispatch = useDispatch();
 
   const [inputvalue,setInput]  = useState("");
+ 
   useEffect(() => {
     if (element.id != 0) {
       setInput(element.text);
@@ -15,6 +16,14 @@ function AddTodo(props){
   }, [element]);
   const addTodoHandler = (event)=>{
     event.preventDefault();
+   
+
+      if(!inputvalue){
+        alert("input can't be empty");
+        return
+      }
+    
+      
    
   if (element.id !== 0) {
     dispatch(updateTodo({ id: element.id, text: inputvalue }));
