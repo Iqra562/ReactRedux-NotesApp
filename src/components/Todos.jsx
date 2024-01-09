@@ -37,10 +37,7 @@ return(
                     </div>
                     <div className="card-action">
                         <h5 id="task-title">Tasks</h5>
-                        <div className="input-field col s12">
-                            <input type="text" name="filter" id="filter"/>
-                            <label >Filter Task</label>
-                        </div>
+                       
                         <ul className="collection">
                           
                             {todos.slice(1).map(todo=>(

@@ -30,8 +30,10 @@ export const todoSlice= createSlice({
     ...state,
     todos: updatedTodos,
   };
+},
+ removeTasks : (state,action)=>{
+  state.todos = ""
 }
-
     }
 })
 export const{addTodo,removeTodo, updateTodo} = todoSlice.actions;
